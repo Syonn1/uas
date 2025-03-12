@@ -24,6 +24,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          
+      - name: Install Firefox & Geckodriver
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y firefox
+          sudo snap install geckodriver
 
       - name: Install dependencies
         run: |
