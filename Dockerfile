@@ -12,4 +12,7 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 
 COPY ./ ./
+
+RUN chown www-data:www-data /var/www/html -R
+
 EXPOSE 80
