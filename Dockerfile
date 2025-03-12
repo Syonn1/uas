@@ -11,5 +11,5 @@ RUN apt-get update && \
 
 WORKDIR /var/www/html
 
-COPY ./src ./
+COPY ./ ./
 EXPOSE 80
