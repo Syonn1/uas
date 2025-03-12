@@ -23,8 +23,8 @@ jobs:
 
       - name: Run AUT and Selenium using docker-compose
         run: | 
-          docker-compose -f docker-compose.app.yaml up -d 
-          docker-compose -f docker-compose.selenium.yaml up --scale firefox=5 -d 
+          docker-compose -f docker-compose.app.yml up -d 
+          docker-compose -f docker-compose.selenium.yml up --scale firefox=5 -d 
       
       - name: Get AUT URL
         run: |
