@@ -32,7 +32,7 @@ jobs:
       - name: ZAP Scan
         uses: hermanka/action-full-scan@master
         with:
-          target: http://172.17.0.1/index.php
+          target: ${{ env.URL }}
           network_name: isolated
 
       - name: stop docker
