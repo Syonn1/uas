@@ -32,14 +32,8 @@ jobs:
       - name: ZAP Scan
         uses: hermanka/action-full-scan@master
         with:
-          target: ${{ env.URL }}
+          target: http://172.17.0.1/index.php
           network_name: isolated
-          
-      - name: Upload ZAP Scan Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: zap_scan_results
-          path: ./zap-results/
 
       - name: stop docker
         run: docker stop docker-apache
